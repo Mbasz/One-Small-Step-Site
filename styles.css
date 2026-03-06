@@ -128,6 +128,83 @@ a:hover {
     width: auto;
 }
 
+/* ── How It Works ────────────────────────────────────────── */
+
+.how-it-works {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px 64px;
+    text-align: center;
+}
+
+.how-it-works-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    letter-spacing: -0.01em;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-card);
+    color: var(--brand-blue);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.step-description {
+    font-size: 0.95rem;
+    color: var(--text-soft);
+    line-height: 1.5;
+}
+
+.step:not(:last-child)::after {
+    content: "\2192";
+    position: absolute;
+    right: -24px;
+    top: 8px;
+    color: var(--text-faint);
+    font-size: 1.25rem;
+}
+
+/* ── About ───────────────────────────────────────────────── */
+
+.about {
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    font-size: 0.9rem;
+    color: var(--text-faint);
+}
+
 /* ── CTA Button (fallback if no badge image) ──────────────── */
 
 .cta-button {
@@ -278,6 +355,15 @@ a:hover {
 
     .hero-description {
         font-size: 0.95rem;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .step:not(:last-child)::after {
+        display: none;
     }
 
     .card {
