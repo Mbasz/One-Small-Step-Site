@@ -13,7 +13,7 @@
 
     --radius-md: 12px;
     --radius-lg: 16px;
-    --max-width: 680px;
+    --max-width: 780px;
 }
 
 /* ── Font Face ────────────────────────────────────────────── */
@@ -83,10 +83,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    min-height: 100vh;
-    padding: 60px 24px;
+    padding: 100px 24px 60px;
     gap: 20px;
 }
 
@@ -128,12 +126,38 @@ a:hover {
     width: auto;
 }
 
+/* ── Screenshots ─────────────────────────────────────────── */
+
+.screenshots {
+    padding: 48px 24px 64px;
+    background: radial-gradient(
+        ellipse at 50% 50%,
+        rgba(96, 165, 250, 0.08) 0%,
+        transparent 70%
+    );
+}
+
+.screenshots-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.screenshot {
+    width: 280px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
 /* ── How It Works ────────────────────────────────────────── */
 
 .how-it-works {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px 64px;
+    padding: 80px 24px 80px;
     text-align: center;
 }
 
@@ -141,7 +165,7 @@ a:hover {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     letter-spacing: -0.01em;
 }
 
@@ -200,7 +224,7 @@ a:hover {
     text-align: center;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px 48px;
+    padding: 0 24px 64px;
     font-size: 0.9rem;
     color: var(--text-faint);
 }
@@ -321,7 +345,7 @@ a:hover {
 
 .footer {
     text-align: center;
-    padding: 32px 24px;
+    padding: 48px 24px;
     font-size: 0.85rem;
     color: var(--text-faint);
 }
@@ -364,6 +388,33 @@ a:hover {
 
     .step:not(:last-child)::after {
         display: none;
+    }
+
+    .screenshots {
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
+
+    .screenshots-row {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 24px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .screenshot {
+        flex-shrink: 0;
+        width: 200px;
+        scroll-snap-align: center;
+    }
+
+    .how-it-works {
+        padding: 48px 24px 48px;
+    }
+
+    .about {
+        padding: 0 24px 40px;
     }
 
     .card {
