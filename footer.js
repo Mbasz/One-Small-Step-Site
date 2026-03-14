@@ -13,7 +13,7 @@
     footer.className = "footer";
     footer.innerHTML =
         '<div class="footer-links">' + links.join("") + "</div>" +
-        "<p>&copy; 2026 Marta Basznianin Software. All rights reserved.</p>";
+        "<p>&copy; 2026 Nami Apps. All rights reserved.</p>";
 
     document.body.appendChild(footer);
 })();
