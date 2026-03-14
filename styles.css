@@ -224,7 +224,7 @@ a:hover {
     text-align: center;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px 64px;
+    padding: 0 24px 32px;
     font-size: 0.9rem;
     color: var(--text-faint);
 }
@@ -264,7 +264,7 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--brand-blue);
     margin-bottom: 32px;
 }
@@ -348,6 +348,13 @@ a:hover {
     padding: 48px 24px;
     font-size: 0.85rem;
     color: var(--text-faint);
+    border-top: 1px solid var(--border-card);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-bottom: 4px;
 }
 
 .footer-links {
