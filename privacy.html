@@ -15,105 +15,97 @@
 
             <div class="card">
                 <h1>Privacy Policy</h1>
-                <p class="last-updated">Last Updated: March 6, 2026</p>
+                <p class="last-updated">Last Updated: May 9, 2026</p>
 
-                <p>One Small Step, provided by Marta Basznianin Software, operating under the brand Nami Apps ("we", "our", or "the app"), is a productivity app that helps you break down goals into actionable steps and stay focused with a built-in timer. This Privacy Policy explains what data we collect, how we use it, and your choices.</p>
+                <p>This Privacy Policy explains how we handle your information when you use the One Small Step iOS app ("the app").</p>
 
-                <h2>Data We Collect</h2>
+                <h2>Who We Are</h2>
+                <p>The app is built by <strong>Marta Basznianin Software</strong>, operating as <strong>Nami Apps</strong>, an independent software studio based in Poland. We are the data controller for any personal data described below. You can reach us at <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a>.</p>
 
-                <h3>Information You Provide</h3>
-                <p>When you use One Small Step, you enter task descriptions ("brain dumps") and may edit the steps the app generates. This content is <strong>stored locally on your device</strong> and is not uploaded to our servers for storage.</p>
-
-                <h3>Focus Session Data</h3>
-                <p>The app tracks timing data for your focus sessions — such as time spent on each step, total focused time, and completion status. This data is <strong>stored locally on your device only</strong>.</p>
-
-                <h3>Subscription Information</h3>
-                <p>If you subscribe to One Small Step Pro, your purchase is processed entirely by <strong>Apple's In-App Purchase system</strong>. We do not collect or store your payment information, Apple ID, or billing details. Subscription status is managed through RevenueCat (see Third-Party Services below).</p>
-
-                <h2>Data We Do NOT Collect</h2>
+                <h2>The Short Version</h2>
                 <ul>
-                    <li>Email addresses, names, or account credentials (no account creation required)</li>
-                    <li>Location data</li>
-                    <li>Contacts, photos, calendar, or other device data</li>
-                    <li>Device identifiers for advertising or tracking</li>
-                    <li>Analytics or usage data beyond what is described above</li>
+                    <li>We don't have user accounts. You don't give us your name, email, or contact info.</li>
+                    <li>Your tasks, brain dumps, and focus session data live on your device — not on our servers.</li>
+                    <li>When you tap the AI breakdown feature, the text you typed is sent to OpenAI through a relay we operate. That's the only thing that leaves your device because of us.</li>
+                    <li>We don't run any third-party analytics, attribution, or advertising SDKs in the app.</li>
+                    <li>You don't need to subscribe to use core features.</li>
                 </ul>
-                <p>The app does not request access to your camera, microphone, photo library, contacts, location, or any other sensitive device capabilities.</p>
 
-                <h2>Third-Party Services</h2>
-
-                <h3>OpenAI (via Supabase Edge Function)</h3>
-                <p>When you use the AI breakdown feature, your task description is sent through a secure server-side proxy (hosted on Supabase) to OpenAI's API to generate actionable steps. <strong>Only the text you typed is sent</strong> — no personal identifiers, device information, or location data is included.</p>
-                <p>Per OpenAI's API data usage policy, data submitted through the API is not used to train their models. OpenAI may retain API inputs for up to 30 days for abuse and misuse monitoring, after which it is deleted.</p>
-                <p>We do not store your task descriptions on our servers. The Supabase Edge Function acts as a pass-through relay.</p>
-
-                <h3>RevenueCat</h3>
-                <p>We use RevenueCat to manage subscription status. RevenueCat receives:</p>
+                <h2>What Stays on Your Device</h2>
                 <ul>
-                    <li>An anonymous, randomly generated user identifier (not linked to your Apple ID or personal information)</li>
-                    <li>Purchase receipts provided by Apple</li>
-                    <li>Basic device information (device type, OS version) for subscription validation</li>
+                    <li>Brain-dump text you type</li>
+                    <li>AI-generated and edited steps</li>
+                    <li>Focus-session timing and history</li>
+                    <li>Subscription status, cached for offline checks</li>
                 </ul>
-                <p>RevenueCat does not receive your task content, focus session data, or any personally identifiable information. For more details, see <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+                <p>This data sits in the app's iOS sandbox. It's encrypted when your device is locked (standard iOS Data Protection) and is included in your iOS backups (iCloud or local) if you have those turned on. Apple — not us — controls what happens in those backups; see <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+                <p>The app does not actively sync your data to any server. We do not have copies of it.</p>
 
-                <h3>Apple</h3>
-                <p>Standard App Store and In-App Purchase interactions are governed by <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+                <h2>What Leaves Your Device — and Why</h2>
 
-                <h2>Data Storage and Security</h2>
-                <p>All your task and session data is stored locally on your device in the app's sandboxed storage. This data is protected by iOS file encryption (encrypted when your device is locked) and is included in your standard iOS backups (iCloud or local).</p>
-                <p>We do not operate servers that store your personal data.</p>
-
-                <h2>Data Controller</h2>
-                <p>The data controller for One Small Step is Marta Basznianin Software, operating under the brand Nami Apps, based in Poland. For questions about how your data is processed, contact us at <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a>.</p>
-
-                <h2>Legal Basis for Processing (EEA Users)</h2>
+                <h3>AI Breakdown (only when you choose to use it)</h3>
+                <p>When you tap the breakdown button, the text from your brain dump is sent over HTTPS to a server we operate (a Supabase Edge Function), which forwards it to OpenAI's API and returns the result. We use the relay so the OpenAI API key isn't exposed in the app — it's a pass-through that doesn't log the body of your request.</p>
                 <ul>
-                    <li><strong>AI breakdown feature:</strong> Consent — you choose to send your task description for AI processing.</li>
-                    <li><strong>Subscription management (RevenueCat):</strong> Performance of a contract — necessary to provide the subscription service you purchased.</li>
-                    <li><strong>Local on-device storage:</strong> Not applicable — data stored locally on your device is not processed by us.</li>
+                    <li><strong>What's sent:</strong> only the text you typed. No name, email, device ID, location, or other identifier.</li>
+                    <li><strong>OpenAI processing:</strong> per OpenAI's API data usage policy in effect at the time of writing, API data is not used to train OpenAI's models. OpenAI may retain API inputs for up to 30 days for abuse monitoring and then deletes them, except where retained longer for legal reasons. Processing happens in the United States. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.</li>
+                    <li><strong>Our retention:</strong> we don't store your text. The Edge Function does not log request bodies.</li>
                 </ul>
+
+                <h3>Supabase (host of our AI relay)</h3>
+                <p>Our relay function is hosted by <strong>Supabase</strong>, based in the United States. Supabase processes the request only to forward it; we have not configured the function to log request bodies. Supabase will see standard request metadata (timestamps, status codes, IP at the network level). See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</p>
+
+                <h3>Subscription Management — RevenueCat</h3>
+                <p>If you subscribe to One Small Step Pro, we use <strong>RevenueCat</strong> to verify your subscription status without operating our own server. RevenueCat receives:</p>
+                <ul>
+                    <li>An identifier RevenueCat generates for your install (not your Apple ID, name, or email).</li>
+                    <li>Your iOS Identifier for Vendor (IDFV) — a per-app identifier Apple supplies that resets when you delete the app.</li>
+                    <li>Your purchase receipt from Apple.</li>
+                </ul>
+                <p>RevenueCat does not receive your tasks, brain dumps, or focus-session data. Apple processes the actual payment; we never see your Apple ID, payment method, or billing address. RevenueCat is based in the United States. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+
+                <h3>Apple — App Store, IAP, and App Analytics</h3>
+                <p>Standard interactions with the App Store (download, install, in-app purchase) are governed by Apple's Privacy Policy. If you have <strong>Share With App Developers</strong> enabled in iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements, Apple may share aggregated, non-identifying usage and crash data with us through App Store Connect. We do not receive identifiers tied to you through this channel, and we do not run any third-party analytics SDK in the app.</p>
+
+                <h2>What We Do Not Collect</h2>
+                <p>We do not collect names, emails, contacts, location, photos, calendar data, device identifiers used for advertising, or any other category not listed above. The app does not request permission to access your camera, microphone, photo library, contacts, or location.</p>
 
                 <h2>International Data Transfers</h2>
-                <p>When you use the AI breakdown feature, your task description is transferred to OpenAI in the United States. Subscription data is processed by RevenueCat in the United States. These providers use Standard Contractual Clauses (SCCs) approved by the European Commission to safeguard data transferred outside the European Economic Area.</p>
+                <p>If you use the AI breakdown feature, your text is transferred to the United States (OpenAI, Supabase). Subscription metadata is processed in the United States (RevenueCat). These providers contractually rely on the European Commission's Standard Contractual Clauses or equivalent safeguards under Articles 44–49 of the GDPR.</p>
 
-                <h2>Your Rights (EEA Users)</h2>
-                <p>Under GDPR, you have the right to:</p>
+                <h2>Legal Bases (EEA / UK Users)</h2>
                 <ul>
-                    <li>Access the personal data we process about you</li>
-                    <li>Rectify inaccurate data</li>
-                    <li>Erase your data ("right to be forgotten")</li>
-                    <li>Restrict processing</li>
-                    <li>Data portability</li>
-                    <li>Object to processing</li>
-                    <li>Withdraw consent at any time (for consent-based processing)</li>
-                </ul>
-                <p>Since we do not store personal data on our servers (task data is local, AI requests are not retained by us, and RevenueCat uses anonymous identifiers), most of these rights are inherently satisfied. To exercise any right, contact us at <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a>.</p>
-
-                <h2>Supervisory Authority</h2>
-                <p>If you are in the European Economic Area and believe we have not adequately addressed your data protection concerns, you have the right to lodge a complaint with your local supervisory authority. In Poland, this is the President of the Personal Data Protection Office (UODO) — <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>.</p>
-
-                <h2>Data Retention</h2>
-                <ul>
-                    <li><strong>Local data:</strong> Persists on your device until you start a new session, clear it within the app, or delete the app. Uninstalling One Small Step permanently removes all local data.</li>
-                    <li><strong>OpenAI:</strong> Task descriptions sent for AI processing are retained by OpenAI for up to 30 days for abuse monitoring, then deleted.</li>
-                    <li><strong>RevenueCat:</strong> Anonymous subscription data is retained as required by Apple for purchase history management.</li>
+                    <li><strong>AI breakdown:</strong> your consent, given when you tap the breakdown button. You can withdraw consent at any time by not using the feature; data already sent is governed by the providers' policies.</li>
+                    <li><strong>Subscription:</strong> performance of a contract — needed to deliver the subscription you bought.</li>
+                    <li><strong>Local on-device data:</strong> not processed by us as a controller, since it doesn't leave your device through our systems.</li>
                 </ul>
 
-                <h2>Your Choices</h2>
+                <h2>Your Rights (EEA / UK Users)</h2>
+                <p>You have the right to access, correct, erase, restrict, port, or object to the processing of personal data we hold, and to withdraw consent at any time. Because we don't keep a copy of your data, in practice:</p>
                 <ul>
-                    <li><strong>Delete your data:</strong> Uninstall the app to permanently remove all locally stored data.</li>
-                    <li><strong>Avoid AI processing:</strong> You are not required to use the AI breakdown feature. If you do not generate a breakdown, no data is sent to external services.</li>
-                    <li><strong>Manage subscriptions:</strong> You can manage or cancel your subscription through your Apple ID settings (Settings &gt; Apple ID &gt; Subscriptions).</li>
+                    <li><strong>Delete everything we have any indirect connection to:</strong> stop using the AI feature (no new transfers) and delete the app (removes all local data).</li>
+                    <li><strong>Withdraw consent:</strong> simply stop using the AI breakdown.</li>
+                    <li><strong>Any other right:</strong> email us at <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a>. We aim to respond within 30 days.</li>
+                </ul>
+                <p>If you believe we've handled your data incorrectly, you can lodge a complaint with your local data protection authority. In Poland, this is the President of the Personal Data Protection Office (UODO) — <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>.</p>
+
+                <h2>Retention</h2>
+                <ul>
+                    <li><strong>Data on your device:</strong> until you clear it in the app, delete the app, or uninstall iOS.</li>
+                    <li><strong>AI requests at OpenAI:</strong> up to 30 days, per OpenAI's policy, except where retained longer for legal reasons.</li>
+                    <li><strong>Subscription data at RevenueCat and Apple:</strong> as needed to manage purchases under their policies.</li>
                 </ul>
 
-                <h2>Children's Privacy</h2>
-                <p>One Small Step is not directed at children under 13 and we do not knowingly collect information from children under 13. If you believe a child has provided data through the app, please contact us.</p>
+                <h2>Children</h2>
+                <p>One Small Step is not directed at children. Where the GDPR digital-consent threshold applies (16 in most EEA countries, including Poland), we do not knowingly process data from children below the applicable threshold. If you believe a child has used the app in a way that resulted in personal data being sent to us, contact us and we will act on it.</p>
 
-                <h2>Changes to This Policy</h2>
-                <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the "Last Updated" date at the top of this page. Your continued use of the app after changes are posted constitutes acceptance of the updated policy.</p>
+                <h2>Security</h2>
+                <p>Data is encrypted in transit (HTTPS/TLS) and on your device (iOS Data Protection, encrypted while the device is locked). We don't store user data, so there's no central database to breach. The only credential held is the OpenAI API key, which lives on the Edge Function and is never shipped with the app.</p>
 
-                <h2>Contact Us</h2>
-                <p>If you have questions about this Privacy Policy, please contact us at:</p>
+                <h2>Changes</h2>
+                <p>We'll update this policy as the app evolves. The "Last Updated" date at the top will reflect any change. For material changes that affect what leaves your device, we will additionally make the change visible from inside the app or on this website before continuing to process data under the new terms.</p>
+
+                <h2>Contact</h2>
+                <p>Marta Basznianin Software (Nami Apps), Poland</p>
                 <p><strong>Email:</strong> <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a></p>
 
             </div>
