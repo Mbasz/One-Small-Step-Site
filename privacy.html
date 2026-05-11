@@ -15,7 +15,7 @@
 
             <div class="card">
                 <h1>Privacy Policy</h1>
-                <p class="last-updated">Last Updated: May 9, 2026</p>
+                <p class="last-updated">Last Updated: May 11, 2026</p>
 
                 <p>This Privacy Policy explains how we handle your information when you use the One Small Step iOS app ("the app").</p>
 
@@ -46,13 +46,13 @@
                 <h3>AI Breakdown (only when you choose to use it)</h3>
                 <p>When you tap the breakdown button, the text from your brain dump is sent over HTTPS to a server we operate (a Supabase Edge Function), which forwards it to OpenAI's API and returns the result. We use the relay so the OpenAI API key isn't exposed in the app — it's a pass-through that doesn't log the body of your request.</p>
                 <ul>
-                    <li><strong>What's sent:</strong> only the text you typed. No name, email, device ID, location, or other identifier.</li>
-                    <li><strong>OpenAI processing:</strong> per OpenAI's API data usage policy in effect at the time of writing, API data is not used to train OpenAI's models. OpenAI may retain API inputs for up to 30 days for abuse monitoring and then deletes them, except where retained longer for legal reasons. Processing happens in the United States. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.</li>
+                    <li><strong>What's sent in the request body:</strong> only the text you typed. No name, email, advertising ID, or device location. As with any HTTPS request, your device's IP address is visible at the network level to our relay (Supabase) and to OpenAI.</li>
+                    <li><strong>OpenAI processing:</strong> per OpenAI's current API data usage policy, API data is not used to train OpenAI's models. OpenAI may retain API inputs for up to 30 days for abuse monitoring and then deletes them, except where retained longer for legal reasons. Processing happens in the United States. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.</li>
                     <li><strong>Our retention:</strong> we don't store your text. The Edge Function does not log request bodies.</li>
                 </ul>
 
                 <h3>Supabase (host of our AI relay)</h3>
-                <p>Our relay function is hosted by <strong>Supabase</strong>, based in the United States. Supabase processes the request only to forward it; we have not configured the function to log request bodies. Supabase will see standard request metadata (timestamps, status codes, IP at the network level). See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</p>
+                <p>Our relay function is hosted by <strong>Supabase</strong>, based in the United States. Supabase processes the request only to forward it; we have not configured the function to log request bodies. Supabase sees standard request metadata (timestamps, status codes, and your device's IP address, which counts as personal data under GDPR). See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</p>
 
                 <h3>Subscription Management — RevenueCat</h3>
                 <p>If you subscribe to One Small Step Pro, we use <strong>RevenueCat</strong> to verify your subscription status without operating our own server. RevenueCat receives:</p>
@@ -74,7 +74,7 @@
 
                 <h2>Legal Bases (EEA / UK Users)</h2>
                 <ul>
-                    <li><strong>AI breakdown:</strong> your consent, given when you tap the breakdown button. You can withdraw consent at any time by not using the feature; data already sent is governed by the providers' policies.</li>
+                    <li><strong>AI breakdown:</strong> Article 6(1)(b) GDPR — performance of a service you specifically request by tapping the breakdown button. Stopping use of the feature prevents any further transfers; data already sent is governed by the providers' policies.</li>
                     <li><strong>Subscription:</strong> performance of a contract — needed to deliver the subscription you bought.</li>
                     <li><strong>Local on-device data:</strong> not processed by us as a controller, since it doesn't leave your device through our systems.</li>
                 </ul>
@@ -83,7 +83,7 @@
                 <p>You have the right to access, correct, erase, restrict, port, or object to the processing of personal data we hold, and to withdraw consent at any time. Because we don't keep a copy of your data, in practice:</p>
                 <ul>
                     <li><strong>Delete everything we have any indirect connection to:</strong> stop using the AI feature (no new transfers) and delete the app (removes all local data).</li>
-                    <li><strong>Withdraw consent:</strong> simply stop using the AI breakdown.</li>
+                    <li><strong>Stop further processing:</strong> simply stop using the AI breakdown — no further data is sent.</li>
                     <li><strong>Any other right:</strong> email us at <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a>. We aim to respond within 30 days.</li>
                 </ul>
                 <p>If you believe we've handled your data incorrectly, you can lodge a complaint with your local data protection authority. In Poland, this is the President of the Personal Data Protection Office (UODO) — <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>.</p>
