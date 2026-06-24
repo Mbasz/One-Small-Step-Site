@@ -15,7 +15,7 @@
 
             <div class="card">
                 <h1>Privacy Policy</h1>
-                <p class="last-updated">Last Updated: May 11, 2026</p>
+                <p class="last-updated">Last Updated: June 24, 2026</p>
 
                 <p>This Privacy Policy explains how we handle your information when you use the One Small Step iOS app ("the app").</p>
 
@@ -27,7 +27,7 @@
                     <li>We don't have user accounts. You don't give us your name, email, or contact info.</li>
                     <li>Your tasks, brain dumps, and focus session data live on your device — not on our servers.</li>
                     <li>When you tap the AI breakdown feature, the text you typed is sent to OpenAI through a relay we operate. That's the only thing that leaves your device because of us.</li>
-                    <li>We don't run any third-party analytics, attribution, or advertising SDKs in the app.</li>
+                    <li>We use PostHog for anonymous usage analytics and Sentry for crash reports — both receive only an app-generated random identifier, never your name, email, or task content. Both are hosted in the EU.</li>
                     <li>You don't need to subscribe to use core features.</li>
                 </ul>
 
@@ -64,26 +64,35 @@
                 <p>RevenueCat does not receive your tasks, brain dumps, or focus-session data. Apple processes the actual payment; we never see your Apple ID, payment method, or billing address. RevenueCat is based in the United States. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
 
                 <h3>Apple — App Store, IAP, and App Analytics</h3>
-                <p>Standard interactions with the App Store (download, install, in-app purchase) are governed by Apple's Privacy Policy. If you have <strong>Share With App Developers</strong> enabled in iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements, Apple may share aggregated, non-identifying usage and crash data with us through App Store Connect. We do not receive identifiers tied to you through this channel, and we do not run any third-party analytics SDK in the app.</p>
+                <p>Standard interactions with the App Store (download, install, in-app purchase) are governed by Apple's Privacy Policy. If you have <strong>Share With App Developers</strong> enabled in iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements, Apple may share aggregated, non-identifying usage and crash data with us through App Store Connect. We do not receive identifiers tied to you through this channel. App Store Connect analytics is separate from the PostHog and Sentry data described below.</p>
+
+                <h3>Anonymous Usage Analytics — PostHog</h3>
+                <p>To understand how the app is used and improve it, the app sends anonymous product events to <strong>PostHog</strong>, hosted in the European Union. Events include things like which screens you visit and which buttons you tap (e.g. "brain dump submitted", "focus session started", "paywall shown"), and aggregate properties such as brain-dump character count, step counts, focus-session durations, and whether you are on the free or premium plan. Each event is tagged with a randomly generated, app-local identifier so we can count distinct devices without identifying you.</p>
+                <p>We do not send your brain-dump text, generated step titles, name, email, IDFA, or any other personal identifier. Analytics is not collected from development (Debug) builds. The app does not currently include an in-app toggle to disable analytics; deleting the app stops further events from being sent. See <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog's Privacy Policy</a>.</p>
+
+                <h3>Crash Reports — Sentry</h3>
+                <p>If the app crashes or hits an unexpected error, the app sends a crash report to <strong>Sentry</strong>, hosted in the European Union. The report contains the crash stack trace, iOS version, device model, app version and build number, and an anonymous device identifier. Crash reports do not include your task content, brain-dump text, or any personal identifier. The app does not currently include an in-app toggle to disable crash reporting; deleting the app stops further reports from being sent. See <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry's Privacy Policy</a>.</p>
 
                 <h2>What We Do Not Collect</h2>
                 <p>We do not collect names, emails, contacts, location, photos, calendar data, device identifiers used for advertising, or any other category not listed above. The app does not request permission to access your camera, microphone, photo library, contacts, or location.</p>
 
                 <h2>International Data Transfers</h2>
-                <p>If you use the AI breakdown feature, your text is transferred to the United States (OpenAI, Supabase). Subscription metadata is processed in the United States (RevenueCat). These providers contractually rely on the European Commission's Standard Contractual Clauses or equivalent safeguards under Articles 44–49 of the GDPR.</p>
+                <p>If you use the AI breakdown feature, your text is transferred to the United States (OpenAI, Supabase). Subscription metadata is processed in the United States (RevenueCat). These providers contractually rely on the European Commission's Standard Contractual Clauses or equivalent safeguards under Articles 44–49 of the GDPR. Analytics (PostHog) and crash reports (Sentry) are processed within the European Union — no international transfer occurs for those data flows.</p>
 
                 <h2>Legal Bases (EEA / UK Users)</h2>
                 <ul>
                     <li><strong>AI breakdown:</strong> Article 6(1)(b) GDPR — performance of a service you specifically request by tapping the breakdown button. Stopping use of the feature prevents any further transfers; data already sent is governed by the providers' policies.</li>
                     <li><strong>Subscription:</strong> performance of a contract — needed to deliver the subscription you bought.</li>
                     <li><strong>Local on-device data:</strong> not processed by us as a controller, since it doesn't leave your device through our systems.</li>
+                    <li><strong>Analytics and crash reports:</strong> Article 6(1)(f) GDPR — our legitimate interest in understanding aggregate feature usage and diagnosing crashes, balanced against the fact that no personal identifiers are collected through these channels.</li>
                 </ul>
 
                 <h2>Your Rights (EEA / UK Users)</h2>
-                <p>You have the right to access, correct, erase, restrict, port, or object to the processing of personal data we hold, and to withdraw consent at any time. Because we don't keep a copy of your data, in practice:</p>
+                <p>You have the right to access, correct, erase, restrict, port, or object to the processing of personal data we hold, and to withdraw consent at any time. The only data we have any connection to consists of AI requests (not stored), subscription metadata (RevenueCat), and anonymous analytics and crash data (PostHog, Sentry). In practice:</p>
                 <ul>
-                    <li><strong>Delete everything we have any indirect connection to:</strong> stop using the AI feature (no new transfers) and delete the app (removes all local data).</li>
-                    <li><strong>Stop further processing:</strong> simply stop using the AI breakdown — no further data is sent.</li>
+                    <li><strong>Delete everything we have any indirect connection to:</strong> stop using the AI feature (no new transfers), delete the app (removes all local data and stops further analytics and crash reports).</li>
+                    <li><strong>Stop AI processing:</strong> simply stop using the AI breakdown — no further AI requests are sent.</li>
+                    <li><strong>Stop analytics and crash reporting:</strong> the app does not currently include an in-app toggle. Deleting the app stops both data flows.</li>
                     <li><strong>Any other right:</strong> email us at <a href="mailto:mbasz.software@gmail.com">mbasz.software@gmail.com</a>. We aim to respond within 30 days.</li>
                 </ul>
                 <p>If you believe we've handled your data incorrectly, you can lodge a complaint with your local data protection authority. In Poland, this is the President of the Personal Data Protection Office (UODO) — <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>.</p>
