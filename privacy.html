@@ -15,7 +15,7 @@
 
             <div class="card">
                 <h1>Privacy Policy</h1>
-                <p class="last-updated">Last Updated: June 24, 2026</p>
+                <p class="last-updated">Last Updated: September 2, 2026</p>
 
                 <p>This Privacy Policy explains how we handle your information when you use the One Small Step iOS app ("the app").</p>
 
@@ -27,7 +27,8 @@
                     <li>We don't have user accounts. You don't give us your name, email, or contact info.</li>
                     <li>Your tasks, brain dumps, and focus session data live on your device — not on our servers.</li>
                     <li>When you tap the AI breakdown feature, the text you typed is sent to OpenAI through a relay we operate. That's the only thing that leaves your device because of us.</li>
-                    <li>We use PostHog for anonymous usage analytics and Sentry for crash reports — both receive only an app-generated random identifier, never your name, email, or task content. Both are hosted in the EU.</li>
+                    <li>We use PostHog for usage analytics and Sentry for crash reports — tagged with an app-generated random identifier, never your name, email, or task content. Both are hosted in the EU.</li>
+                    <li>During onboarding you pick a general reason for using the app (e.g. "easily distracted"). That choice, plus basic Apple Search Ads attribution, is included in analytics to help us improve the app.</li>
                     <li>You don't need to subscribe to use core features.</li>
                 </ul>
 
@@ -54,6 +55,9 @@
                 <h3>Supabase (host of our AI relay)</h3>
                 <p>Our relay function is hosted by <strong>Supabase</strong>, based in the United States. Supabase processes the request only to forward it; we have not configured the function to log request bodies. Supabase sees standard request metadata (timestamps, status codes, and your device's IP address, which counts as personal data under GDPR). See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</p>
 
+                <h3>Voice Dictation (only when you choose to use it)</h3>
+                <p>If you tap the microphone button to dictate a brain dump, the app uses Apple's Speech Recognition to convert your speech to text, which requires microphone and speech-recognition permission. On devices and languages that support on-device recognition, your audio is transcribed locally and never leaves your device. For languages without on-device support, Apple may process the audio on its servers to return the transcription — see <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. The app keeps only the resulting text, which you can edit or delete; it does not store or transmit the audio itself, and we never receive it.</p>
+
                 <h3>Subscription Management — RevenueCat</h3>
                 <p>If you subscribe to One Small Step Pro, we use <strong>RevenueCat</strong> to verify your subscription status without operating our own server. RevenueCat receives:</p>
                 <ul>
@@ -67,14 +71,14 @@
                 <p>Standard interactions with the App Store (download, install, in-app purchase) are governed by Apple's Privacy Policy. If you have <strong>Share With App Developers</strong> enabled in iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements, Apple may share aggregated, non-identifying usage and crash data with us through App Store Connect. We do not receive identifiers tied to you through this channel. App Store Connect analytics is separate from the PostHog and Sentry data described below.</p>
 
                 <h3>Anonymous Usage Analytics — PostHog</h3>
-                <p>To understand how the app is used and improve it, the app sends anonymous product events to <strong>PostHog</strong>, hosted in the European Union. Events include things like which screens you visit and which buttons you tap (e.g. "brain dump submitted", "focus session started", "paywall shown"), and aggregate properties such as brain-dump character count, step counts, focus-session durations, and whether you are on the free or premium plan. Each event is tagged with a randomly generated, app-local identifier so we can count distinct devices without identifying you.</p>
+                <p>To understand how the app is used and improve it, the app sends anonymous product events to <strong>PostHog</strong>, hosted in the European Union. Events include things like which screens you visit and which buttons you tap (e.g. "brain dump submitted", "focus session started", "paywall shown"), and aggregate properties such as brain-dump character count, step counts, focus-session durations, and whether you are on the free or premium plan. We also include the general reason you selected during onboarding (e.g. "too many things to do", "easily distracted") — a self-described preference, not health or other special-category data — and, if you installed the app after tapping an Apple Search Ads ad, the campaign and keyword identifiers Apple provides through its privacy-preserving AdServices API (no advertising identifier, and no tracking prompt is shown). Each event is tagged with a randomly generated, app-local identifier so we can count distinct devices without identifying you.</p>
                 <p>We do not send your brain-dump text, generated step titles, name, email, IDFA, or any other personal identifier. Analytics is not collected from development (Debug) builds. The app does not currently include an in-app toggle to disable analytics; deleting the app stops further events from being sent. See <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog's Privacy Policy</a>.</p>
 
                 <h3>Crash Reports — Sentry</h3>
                 <p>If the app crashes or hits an unexpected error, the app sends a crash report to <strong>Sentry</strong>, hosted in the European Union. The report contains the crash stack trace, iOS version, device model, app version and build number, and an anonymous device identifier. Crash reports do not include your task content, brain-dump text, or any personal identifier. The app does not currently include an in-app toggle to disable crash reporting; deleting the app stops further reports from being sent. See <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry's Privacy Policy</a>.</p>
 
                 <h2>What We Do Not Collect</h2>
-                <p>We do not collect names, emails, contacts, location, photos, calendar data, device identifiers used for advertising, or any other category not listed above. The app does not request permission to access your camera, microphone, photo library, contacts, or location.</p>
+                <p>We do not collect names, emails, contacts, location, photos, calendar data, device identifiers used for advertising, or any other category not listed above. The app requests microphone and speech-recognition access only for optional voice dictation (described above); it does not request access to your camera, photo library, contacts, or location.</p>
 
                 <h2>International Data Transfers</h2>
                 <p>If you use the AI breakdown feature, your text is transferred to the United States (OpenAI, Supabase). Subscription metadata is processed in the United States (RevenueCat). These providers contractually rely on the European Commission's Standard Contractual Clauses or equivalent safeguards under Articles 44–49 of the GDPR. Analytics (PostHog) and crash reports (Sentry) are processed within the European Union — no international transfer occurs for those data flows.</p>
@@ -84,7 +88,7 @@
                     <li><strong>AI breakdown:</strong> Article 6(1)(b) GDPR — performance of a service you specifically request by tapping the breakdown button. Stopping use of the feature prevents any further transfers; data already sent is governed by the providers' policies.</li>
                     <li><strong>Subscription:</strong> performance of a contract — needed to deliver the subscription you bought.</li>
                     <li><strong>Local on-device data:</strong> not processed by us as a controller, since it doesn't leave your device through our systems.</li>
-                    <li><strong>Analytics and crash reports:</strong> Article 6(1)(f) GDPR — our legitimate interest in understanding aggregate feature usage and diagnosing crashes, balanced against the fact that no personal identifiers are collected through these channels.</li>
+                    <li><strong>Analytics, crash reports, and attribution:</strong> Article 6(1)(f) GDPR — our legitimate interest in understanding feature usage, diagnosing crashes, and measuring which campaigns bring users, balanced against the fact that this data is pseudonymous (tied only to a random app-generated identifier) and excludes your name, email, contact details, and task content. The onboarding reason is a general self-described preference, not health or other special-category data.</li>
                 </ul>
 
                 <h2>Your Rights (EEA / UK Users)</h2>
